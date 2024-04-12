@@ -34,7 +34,7 @@ export default function Page({ params } :any){
     const props = getPost( params);
 
     return (
-        <article className='prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto'>
+        <article className=' prose prose-sm md:prose-base lg:prose-lg prose-slate !prose-invert mx-auto '>
             <h1>{props.fontMatter.title}</h1>
 
             <MDXRemote source={props.content} ></MDXRemote>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "Andi Blog",
@@ -15,16 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className=" max-w-3xl mx-auto py-20 px-4">
+    <html lang="en" className="bg-slate-900 max-w-3xl mx-auto py-20 px-4">
       <body className={GeistSans.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+     
         {children}
-        </ThemeProvider>
+       
         </body>
     </html>
   );
