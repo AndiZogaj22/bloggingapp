@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
-
+import { ModeToggle } from '@/components/ModeToggle'
 
 export default function Home() {
   const blogDir  = "blogs";
@@ -32,7 +32,7 @@ export default function Home() {
     <h2 className='text-2xl font-blod'>
       Latest Blogs
     </h2>
-
+<div><ModeToggle /></div>
     <div className='py-2'>
       {blogs.map(blog =>(
         <Link href={'/blogs/' + blog.slug} passHref key={blog.slug}>
